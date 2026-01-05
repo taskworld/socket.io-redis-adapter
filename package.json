@@ -14,7 +14,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "compile": "rimraf ./dist && tsc",
-    "test": "npm run format:check && tsc && nyc mocha --bail --require ts-node/register test/test-runner.ts",
+    "test": "npm run format:check && tsc && nyc mocha --bail --exit --require ts-node/register test/test-runner.ts",
     "format:check": "prettier --parser typescript --check 'lib/**/*.ts' 'test/**/*.ts'",
     "format:fix": "prettier --parser typescript --write 'lib/**/*.ts' 'test/**/*.ts'",
     "prepack": "npm run compile"
